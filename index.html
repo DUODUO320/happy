@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>祝你生日快乐~</title>
+		<style>
+			h1{color:#F2A8BB;}
+		</style>
+		<style>
+			h2{color: #BED8F9;}
+		</style>
+		<style>
+			h3{color: #00aa00;}
+		</style>
+		 <style>
+		        /* 动画定义 */
+		        @keyframes autoZoom {
+		            0%   { transform: scale(1); }   /* 原始大小 */
+		            50%  { transform: scale(1.2); } /* 放大1.2倍 */
+		            100% { transform: scale(1); }   /* 缩回去 */
+		        }
+		
+		        /* 图片样式 */
+		        .auto-img {
+		            width: 200px; 
+		            animation: autoZoom 1s infinite ease-in-out;
+		        }
+		    </style>
+			<style>
+			        * {
+			            margin: 0;
+			            padding: 0;
+			            box-sizing: border-box;
+			        }
+			        body {
+			            height: 100vh;
+			            background-image: url("img/xibao.jpg"); 
+			            background-size: cover;
+			            background-position: center;
+			            background-repeat: no-repeat;
+			            /* 文字整体居中 */
+			            display: flex;
+			            justify-content: center;
+			            align-items: center;
+			            color: white; /* 文字颜色，可改 */
+			        }
+			        /* 文字容器：加半透明背景提升可读性 */
+			         .text-container {
+			                    background: rgba(0, 0, 0, 0.6);
+			                    padding: 40px 60px;
+			                    border-radius: 12px;
+			                   
+			                }
+			                /* 三段文字分行间距 */
+			                .text-container .animate-text {
+			                    margin: 20px 0;
+			                    text-align: center;
+			                    font-size: 28px; 
+								animation: scale 1s ease-in-out infinite alternate;
+			                }
+			                .static-content {
+			                           margin-top: 20px;
+			                           text-align: center;
+			                           font-size: 20px;
+			                       }
+			                       .static-content img {
+			                           width: 200px; 
+			                           margin-top: 10px;
+			                       }
+			                       @keyframes scale {
+			                           0% { transform: scale(1); }
+			                           100% { transform: scale(1.2); }
+			                       }
+								  
+								       
+			    </style>
+	</head>
+	<body>
+	  <!-- 本地背景音乐核心代码：静音自动播+循环+隐藏 -->
+	       <audio id="bgm" controls loop>
+	              <!-- 本地音乐路径：必须和你的文件对应！ -->
+	              <source src="audio/guanyu.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放，请升级浏览器！
+    </audio>
+		 <div class="text-container">
+			 <div class="static-content">
+			 <img src="img/sgl.jpg" class="auto-img" alt="自动缩放">
+			  </div>
+		<h1 class="animate-text">喜报！！！</h1>
+		<h2 class="animate-text">男同性恋爱好者、米哈游忠实的卫兵、第五人格高玩、lmp、星露谷老乡</h2> 
+		<h1 class="animate-text">ZCF又长一岁！！</h1> 
+	
+	<div class="static-content">
+	            <h1>ZCF的最爱</h1>
+	      </div>
+		  <div class="static-content">
+	<a href=" https://www.bilibili.com/video/BV11z4y187KN/?share_source=copy_web&vd_source=7562cdbb2e60e917474f97be3b727c16" target="_blank">
+	  <img src="img/bai.png" class="auto-img" alt="自动缩放">  
+	</a>
+	 </div>
+	<div class="static-content">
+	            <h2>ZCF的小给给</h2>
+	      </div>
+		  <div class="static-content">
+	<a href="https://www.bilibili.com/video/BV1h1kcBfEuJ/?share_source=copy_web&vd_source=7562cdbb2e60e917474f97be3b727c16" target="_blank">
+	  <img src="img/lm.jpg" class="auto-img" alt="自动缩放">
+	</a>
+	 </div>
+	  <script>
+	        const bgm = document.getElementById('bgm');
+	    
+	        document.addEventListener('click', () => {
+	            if (bgm.muted) {
+	                bgm.muted = false;
+	                bgm.volume = 0.5; // 音量0-1，可改（0.3=30%，1=100%）
+	            }
+	        }, { once: true });
+	    </script>
+	</body>
+</html>
